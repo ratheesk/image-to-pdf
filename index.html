@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Convert images to PDF online with this simple tool. Drag and drop images or choose files to convert.">
+    <meta name="keywords" content="image to PDF, converter, online tool, convert images to PDF">
+    <meta name="author" content="Your Name">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Image to PDF Converter</h1>
+
+    <div id="drop-area">
+        <p>Drag & Drop images here</p>
+        <p>or</p>
+        <label for="image-input" id="file-label">Choose file</label>
+        <input type="file" id="image-input" accept="image/*" hidden>
+        <span id="file-chosen">No file chosen</span>
+    </div>
+
+
+    <img id="image-preview" style="display:none; max-width: 10%; height: auto; margin: 5px;" />
+
+    <div id="success-message" style="display:none; color:green; margin: 5px;">
+        <p>Conversion successful!</p>
+    </div>
+
+    <button id="convert-btn">Convert to PDF</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

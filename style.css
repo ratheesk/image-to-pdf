@@ -1,0 +1,125 @@
+/* Reset some default styles */
+body,
+h1,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type='file'] {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: calc(80% - 24px); /* Adjust width based on padding and border */
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #05b364;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #02850b;
+}
+
+/* Add some spacing and improve form layout for desktop sizes */
+@media (min-width: 768px) {
+  form,
+  .container {
+    width: 50%;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #drop-area {
+    max-height: fit-content;
+  }
+}
+
+.file-upload {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Creates space between the label and span */
+}
+
+#file-label {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#file-label:hover {
+  background-color: #0056b3;
+}
+
+#file-chosen {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
+  /* width: 30%; */
+}
+
+#success-message {
+  margin-top: 20px;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#drop-area p {
+  margin: 0;
+}
+
+#drop-area input[type='file'] {
+  display: none;
+}
+
+#drop-area.highlight {
+  background-color: #f0f0f0;
+}
