@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Width and Height</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .device-info {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Device Width and Height</h1>
+        <div class="device-info">
+            <p><strong>Device Width:</strong> <span id="device-width"></span></p>
+            <p><strong>Device Height:</strong> <span id="device-height"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the span elements
+        const deviceWidthSpan = document.getElementById('device-width');
+        const deviceHeightSpan = document.getElementById('device-height');
+
+        // Update the span elements with device width and height
+        deviceWidthSpan.textContent = screen.width + 'px';
+        deviceHeightSpan.textContent = screen.height + 'px';
+
+        // Update width and height whenever the window is resized
+        window.addEventListener('resize', function () {
+            deviceWidthSpan.textContent = screen.width + 'px';
+            deviceHeightSpan.textContent = screen.height + 'px';
+        });
+    </script>
+</body>
+
+</html>
